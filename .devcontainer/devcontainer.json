@@ -1,0 +1,7 @@
+{
+  "name": "pokemon-esmeralda-linux",
+  "dockerComposeFile": ["../compose.yaml"],
+  "service": "builder",
+  "workspaceFolder": "/work",
+  "overrideCommand": true
+}

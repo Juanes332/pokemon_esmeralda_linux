@@ -1,0 +1,13 @@
+name: pokemon-esmeralda-linux
+
+services:
+  builder:
+    build:
+      context: .
+      target: builder
+    image: pokemon-esmeralda-linux-builder
+    working_dir: /work
+    user: "${UID:-1000}:${GID:-1000}"
+    volumes:
+      - .:/work
+    command: ["sh", "-c", "make clean && make dist test"]
